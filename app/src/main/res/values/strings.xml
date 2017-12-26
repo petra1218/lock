@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lock</string>
+    <string name="title_activity_lock">LockActivity</string>
+</resources>
