@@ -1,5 +1,6 @@
 package com.gearglen.lock;
 
+import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -11,7 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class LockActivity extends AppCompatActivity {
+public class LockActivity extends Activity {
 
     private DevicePolicyManager dpm;
     private ComponentName componentName;
@@ -42,7 +43,7 @@ public class LockActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_lock);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +51,7 @@ public class LockActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 dpm.lockNow(); // 锁屏
+                android.os.Process.killProcess(android.os.Process.myPid());
 
             }
         });

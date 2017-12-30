@@ -6,8 +6,8 @@ android {
         applicationId "com.gearglen.lock"
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 10103
-        versionName "1.0.1.3"
+        versionCode 10104
+        versionName "1.0.1.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

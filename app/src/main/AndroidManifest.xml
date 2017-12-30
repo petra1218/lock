@@ -13,7 +13,7 @@
         <service
             android:name=".LockService"
             android:enabled="false"
-            android:exported="false"></service>
+            android:exported="false" />
 
         <receiver
             android:name=".LockReceiver"
@@ -31,8 +31,18 @@
 
         <activity
             android:name=".LockActivity"
-            android:label="@string/title_activity_lock"
+            android:label="锁屏管理"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InvisibleActivity"
+            android:label="一键锁屏"
+            android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
